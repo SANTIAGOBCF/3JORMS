@@ -1,2 +1,2 @@
-# 3JORMS
-## Aplicación: DC19
+# 3JORMS 
+## Difusión COVID-19 (DC19)
