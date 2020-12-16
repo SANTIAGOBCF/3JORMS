@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}DC19 - Confirma tu cuenta{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>
+        Hola, {{ current_user.full_name|upper }}!
+    </h1>
+    <h3>Aún no ha confirmado su cuenta.</h3>
+    <p>
+        Antes de poder acceder a este sitio, debe confirmar su cuenta.
+        Revise su bandeja de entrada, debería haber recibido un correo electrónico con un enlace de confirmación.
+    </p>
+    <p>
+        Necesita otra confirmacion de email?
+        <a href="{{ url_for('auth.resend_confirmation') }}">Click aquí</a>
+    </p>
+</div>
+{% endblock %}
