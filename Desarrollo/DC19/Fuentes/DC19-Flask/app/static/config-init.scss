@@ -16,6 +16,12 @@ html, body{
   max-height: 100%;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 #override .row {
   margin: 0;
   padding: 0;
@@ -29,9 +35,27 @@ body {
 
 footer {
   background-color: #1f1f1f;
-  padding: 60px;
-}
+  height: 150px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
 
+  h4 {
+    font-weight: 700;
+    color: #ccc;
+  }
+
+  a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+
+
+}
 
 #override {
   .col,
