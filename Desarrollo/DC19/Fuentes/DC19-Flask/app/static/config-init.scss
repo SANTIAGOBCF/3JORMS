@@ -28,8 +28,6 @@ ul {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   min-height: 100%;
 }
 
@@ -110,8 +108,9 @@ body {
 
 footer {
   background-color: #1f1f1f;
-  height: 180px;
-  padding: 40px 60px !important;
+  height: 150px;
+  margin-top: 20px;
+  padding: 20px 60px !important;
   width: 100% !important;
   color: #ccc;
 
@@ -132,7 +131,7 @@ footer {
 
 @media only screen and (max-width: 747px) {
   footer {
-    height: 400px;
+    height: 240px;
   }
 }
 
