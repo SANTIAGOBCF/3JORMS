@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block navbar %}
-<div class="navbar navbar-white topbar"  id="override" role="navigation">
+<div class="navbar navbar-inverse topbar"  id="override" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -25,6 +25,9 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="{{ url_for('main.index') }}">Inicio</a></li>
+                <li><a href="#">Publicaciones</a></li>
+                <li><a href="#">Foro</a></li>
+
                 {% if current_user.is_authenticated %}
                 <li><a href="{{ url_for('main.user', alias=current_user.alias) }}">Perfil</a></li>
                 {% endif %}
@@ -41,6 +44,7 @@
                 </li>
                 {% else %}
                 <li><a class="btn btn-dark" href="{{ url_for('auth.login') }}">Ingresar</a></li>
+                <li><a class="btn btn-dark" style="margin-left: 10px;" href="{{ url_for('auth.register') }}">Registrarse</a></li>
                 {% endif %}
             </ul>
         </div>
@@ -60,22 +64,25 @@
     {% block page_content %}{% endblock %}
 </div>
 
-<footer>
-    <div>
-        <h4>Acerca de Nosotros</h4>
-        <ul>
-            <li><a href="#">Información</a></li>
-            <li><a href="#">Acuerdo de privacidad</a></li>
-            <li><a href="#">Misión y Visión</a></li>
-        </ul>
+<footer class="container">
+    <div class="row">
+        <div class="col-12 col-sm-6 pb-3">
+            <h4>Acerca de Nosotros</h4>
+            <ul>
+                <li><a href="#">Información</a></li>
+                <li><a href="#">Acuerdo de privacidad</a></li>
+                <li><a href="#">Misión y Visión</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-sm-6 pb-3">
+            <h4>Contáctenos</h4>
+            <ul>
+                <li>E-mail: soporte@3jorms.com.pe</li>
+                <li>+51 937 853 201</li>
+            </ul>
+        </div>
     </div>
-    <div>
-        <h4>Contáctenos</h4>
-        <ul>
-            <li><a href="#">E-mail:soporte@3jorms.com.pe</a></li>
-            <li><a href="#">+51 937 853 201</a></li>
-        </ul>
-    </div>
+    
 </footer>
 
 

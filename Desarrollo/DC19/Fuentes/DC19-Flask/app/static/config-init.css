@@ -36,32 +36,6 @@ body {
   min-height: 100%;
 }
 
-footer {
-  background-color: #1f1f1f;
-  height: 150px;
-  padding: 20px 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-footer h4 {
-  font-weight: 700;
-  color: #ccc;
-}
-
-footer a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: none;
-}
-
 #override .col,
 #override .col-1,
 #override .col-10,
@@ -135,6 +109,34 @@ footer a:hover {
   padding: 0;
 }
 
+footer {
+  background-color: #1f1f1f;
+  height: 180px;
+  padding: 40px 60px !important;
+  width: 100% !important;
+  color: #ccc;
+}
+
+footer h4 {
+  font-weight: 700;
+  color: #ccc;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 747px) {
+  footer {
+    height: 400px;
+  }
+}
+
 .topbar a {
   color: #000;
 }
@@ -142,7 +144,6 @@ footer a:hover {
 #override.topbar {
   border-bottom: 1px solid #b8b8b8;
   margin: 0;
-  background-color: #fff;
 }
 
 #override.content-body {
@@ -154,12 +155,13 @@ footer a:hover {
 }
 
 #override .btn {
-  padding: 10px 30px;
-  border-radius: 20px;
+  padding: 8px 25px;
+  border-radius: 22px;
+  margin: 2px 6px;
 }
 
 #override .btn-dark {
-  background-color: #202020;
+  background-color: #303030;
   color: #c4c4c4;
 }
 

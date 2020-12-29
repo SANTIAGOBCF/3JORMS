@@ -33,30 +33,6 @@ body {
   min-height: 100%;
 }
 
-footer {
-  background-color: #1f1f1f;
-  height: 150px;
-  padding: 20px 30px;
-  display: flex;
-  justify-content: space-between;
-
-  h4 {
-    font-weight: 700;
-    color: #ccc;
-  }
-
-  a {
-    color: #ccc;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: none;
-  }
-
-
-}
-
 #override {
   .col,
   .col-1,
@@ -132,6 +108,35 @@ footer {
   }
 }
 
+footer {
+  background-color: #1f1f1f;
+  height: 180px;
+  padding: 40px 60px !important;
+  width: 100% !important;
+  color: #ccc;
+
+  h4 {
+    font-weight: 700;
+    color: #ccc;
+  }
+
+  a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 747px) {
+  footer {
+    height: 400px;
+  }
+}
+
+
 .topbar a {
   color: #000;
 }
@@ -139,7 +144,6 @@ footer {
 #override.topbar {
   border-bottom: 1px solid rgb(184, 184, 184);
   margin: 0;
-  background-color: #fff;
 }
 
 #override.content-body {
@@ -151,12 +155,13 @@ footer {
 #override {
 
   .btn {
-    padding: 10px 30px;
-    border-radius: 20px;
+    padding: 8px 25px;
+    border-radius: 22px;
+    margin: 2px 6px;
   }
 
   .btn-dark {
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(48, 48, 48);
     color: rgb(196, 196, 196);
   }
 
