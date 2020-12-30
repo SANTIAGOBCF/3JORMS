@@ -1,11 +1,11 @@
-Dear {{ user.alias }},
+Estimado {{ user.alias }},
 
-To confirm your new email address click on the following link:
+Para confirmar su email haga click en el siguiente link:
 
 {{ url_for('auth.change_email', token=token, _external=True) }}
 
-Sincerely,
+Atentamente,
 
-The DC19 Team
+el equipo de DC19
 
-Note: replies to this email address are not monitored.
+Nota: Las respuestas a este correo no son monitorizadas.

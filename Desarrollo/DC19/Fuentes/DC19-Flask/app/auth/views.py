@@ -9,7 +9,6 @@ from .forms import LoginForm, RegistrationForm, ChangePasswordForm, \
 from requests import request as req
 
 
-
 @auth.before_app_request
 def before_request():
     if current_user.is_authenticated:
@@ -48,7 +47,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    flash('You have been logged out.')
+    flash('Usted ha sido desconectado.')
     return redirect(url_for('main.index'))
 
 
@@ -60,9 +59,6 @@ def register():
         answer = req('GET', url).json()
         full_name_dni = answer.get('nombres') + " " + answer.get("apellidoPaterno") + " " + answer.get('apellidoMaterno')
         cui_dni = answer.get('codVerifica')
-        print(full_name_dni)
-        print(form.full_name.data)
-        print(cui_dni)
         if form.full_name.data.lower() == full_name_dni.lower() and int(form.cui.data) == int(cui_dni):
             user = User(email=form.email.data,
                         alias=form.alias.data,
