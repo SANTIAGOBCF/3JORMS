@@ -1,8 +1,8 @@
-<p>Dear {{ user.alias }},</p>
-<p>To confirm your new email address <a href="{{ url_for('auth.change_email', token=token, _external=True) }}">click
+<p>Estimado {{ user.alias }},</p>
+<p>Para confirmar su email haga <a href="{{ url_for('auth.change_email', token=token, _external=True) }}">click
     here</a>.</p>
-<p>Alternatively, you can paste the following link in your browser's address bar:</p>
+<p>Alternativamente, puede pegar el siguiente enlace en la barra de direcciones de su navegador:</p>
 <p>{{ url_for('auth.change_email', token=token, _external=True) }}</p>
-<p>Sincerely,</p>
-<p>The DC19 Team</p>
-<p><small>Note: replies to this email address are not monitored.</small></p>
+<p>Atentamente,</p>
+<p>el equipo de DC19</p>
+<p><small>Nota: Las respuestas a este correo no son monitorizadas.</small></p>
