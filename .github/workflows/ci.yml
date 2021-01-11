@@ -33,12 +33,14 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-    - name: Coverage report & Flask test
+    - name: Run test
       run: |
         export FLASK_APP=Desarrollo/DC19/Fuentes/DC19-Flask/dc19.py
         export DC19_ADMIN=admin@dc19.org
         export FLASK_DEBUG=1
         export MAIL_USERNAME=app.supp.20@gmail.com
         export MAIL_PASSWORD=appsup20
-        coverage run -m flask test
-        coverage report -m
+        coverage run -m unittest -v
+    
+    - name: Coverage report
+      run: coverage report -m
