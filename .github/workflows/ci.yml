@@ -32,15 +32,59 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-
+    
+    - name: Create folder to artifact
+      run: | 
+        mkdir artifact
+        echo "DC19 Artifact: Continous Integrations" |& tee artifact/ci-artifact.txt
+        echo "-----------------------------------------------------------------" |& tee -a artifact/ci-artifact.txt
+      
     - name: Run test
+      env:
+        FLASK_APP: Desarrollo/DC19/Fuentes/DC19-Flask/dc19.py
+#         DC19_ADMIN: ${{ secrets.DC19_ADMIN }}
+        DC19_ADMIN: admin@dc19.org
+        FLASK_DEBUG: 1
+#         MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+        MAIL_USERNAME: app.supp.20@gmail.com
+#         MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+        MAIL_PASSWORD: appsup20
       run: |
-        export FLASK_APP=Desarrollo/DC19/Fuentes/DC19-Flask/dc19.py
-        export DC19_ADMIN=admin@dc19.org
-        export FLASK_DEBUG=1
-        export MAIL_USERNAME=app.supp.20@gmail.com
-        export MAIL_PASSWORD=appsup20
-        coverage run -m unittest discover -s Desarrollo/DC19/Fuentes/DC19-Flask -v
+        echo "" >> artifact/ci-artifact.txt
+        echo "" >> artifact/ci-artifact.txt
+        echo "Tests results" |& tee -a artifact/ci-artifact.txt
+        echo "-------------" |& tee -a artifact/ci-artifact.txt
+        coverage run -m unittest discover -s Desarrollo/DC19/Fuentes/DC19-Flask -v |& tee -a artifact/ci-artifact.txt
     
     - name: Coverage report
-      run: coverage report -m
+      run: |
+        echo "" >> artifact/ci-artifact.txt
+        echo "" >> artifact/ci-artifact.txt
+        echo "Coverage results" |& tee -a artifact/ci-artifact.txt
+        echo "----------------" |& tee -a artifact/ci-artifact.txt
+        coverage report -m |& tee -a artifact/ci-artifact.txt
+        
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: CI-artifact
+        path: artifact/ci-artifact.txt
+        
+#     - name: Send mail
+#       uses: dawidd6/action-send-mail@v2
+#       with:
+#         server_address: smtp.gmail.com
+#         server_port: 465
+#         username: ${{secrets.MAIL_USERNAME}}
+#         password: ${{secrets.MAIL_PASSWORD}}
+#         subject: Github Actions job result
+#         # Literal body:
+#         body: Build job of ${{github.repository}} completed successfully!
+#         # Read file contents as body:
+#         to: yihsic@gmail.com,roger.ramos5@unmsm.edu.pe
+#         from: DC19 # <user@example.com>
+#         # content_type: text/html
+#         # Optional converting Markdown to HTML (set content_type to text/html too):
+#         convert_markdown: true
+#         # Optional attachments:
+#         attachments: artifact/ci-artifact.txt  
