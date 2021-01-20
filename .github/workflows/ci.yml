@@ -80,7 +80,7 @@ jobs:
         # Read file contents as body:
         to: yihsic@gmail.com,roger.ramos5@unmsm.edu.pe
         from: DC19 # <user@example.com>
-        # content_type: text/html
+        content_type: text/html
         # Optional converting Markdown to HTML (set content_type to text/html too):
         convert_markdown: true
         # Optional attachments:
