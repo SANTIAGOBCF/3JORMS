@@ -42,13 +42,10 @@ jobs:
     - name: Run test
       env:
         FLASK_APP: Desarrollo/DC19/Fuentes/DC19-Flask/dc19.py
-#         DC19_ADMIN: ${{ secrets.DC19_ADMIN }}
-        DC19_ADMIN: admin@dc19.org
+        DC19_ADMIN: ${{ secrets.DC19_ADMIN }}
         FLASK_DEBUG: 1
-#         MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
-        MAIL_USERNAME: app.supp.20@gmail.com
-#         MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
-        MAIL_PASSWORD: appsup20
+        MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+        MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
       run: |
         echo "" >> artifact/ci-artifact.txt
         echo "" >> artifact/ci-artifact.txt
@@ -70,21 +67,21 @@ jobs:
         name: CI-artifact
         path: artifact/ci-artifact.txt
         
-#     - name: Send mail
-#       uses: dawidd6/action-send-mail@v2
-#       with:
-#         server_address: smtp.gmail.com
-#         server_port: 465
-#         username: ${{secrets.MAIL_USERNAME}}
-#         password: ${{secrets.MAIL_PASSWORD}}
-#         subject: Github Actions job result
-#         # Literal body:
-#         body: Build job of ${{github.repository}} completed successfully!
-#         # Read file contents as body:
-#         to: yihsic@gmail.com,roger.ramos5@unmsm.edu.pe
-#         from: DC19 # <user@example.com>
-#         # content_type: text/html
-#         # Optional converting Markdown to HTML (set content_type to text/html too):
-#         convert_markdown: true
-#         # Optional attachments:
-#         attachments: artifact/ci-artifact.txt  
+    - name: Send mail
+      uses: dawidd6/action-send-mail@v2
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{secrets.MAIL_USERNAME}}
+        password: ${{secrets.MAIL_PASSWORD}}
+        subject: Github Actions job result
+        # Literal body:
+        body: Build job of ${{github.repository}} completed successfully!
+        # Read file contents as body:
+        to: yihsic@gmail.com,roger.ramos5@unmsm.edu.pe
+        from: DC19 # <user@example.com>
+        # content_type: text/html
+        # Optional converting Markdown to HTML (set content_type to text/html too):
+        convert_markdown: true
+        # Optional attachments:
+        attachments: artifact/ci-artifact.txt  
