@@ -1,16 +1,21 @@
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="">
+{% endblock %}
+
 {% block title %}DC19 - Iniciar Sesión{% endblock %}
 
 {% block page_content %}
 <div class="page-header">
     <h1>Iniciar Sesión</h1>
 </div>
-<div class="col-md-4">
+<div class="col-md-4 login">
     {{ wtf.quick_form(form) }}
     <br>
-    <p>¿Olvidaste tu contraseña? <a href="{{ url_for('auth.password_reset_request') }}">Haga clic aquí para restablecerla.</a>.</p>
-    <p>¿Nuevo usuario? <a href="{{ url_for('auth.register') }}">Registrate aqui.</a>.</p>
+    <p>¿Olvidaste tu contraseña? <a href="{{ url_for('auth.password_reset_request') }}">Haga clic aquí para restablecerla.</a></p>
+    <p>¿Nuevo usuario? <a href="{{ url_for('auth.register') }}">Registrate aqui.</a></p>
 </div>
 {% endblock %}

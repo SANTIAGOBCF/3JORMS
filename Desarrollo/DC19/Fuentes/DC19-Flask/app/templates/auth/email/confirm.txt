@@ -1,13 +1,13 @@
-Dear {{ user.alias }},
+Estimado {{ user.username }},
 
-Welcome to DC19!
+¡Bienvenido a DC19!
 
-To confirm your account please click on the following link:
+Para confirmar su cuenta haga click en el siguiente link:
 
 {{ url_for('auth.confirm', token=token, _external=True) }}
 
-Sincerely,
+Atentamente,
 
-The DC19 Team
+El equipo de DC19
 
-Note: replies to this email address are not monitored.
+Nota: Las respuestas a esta dirección de correo electrónico no se supervisan.
