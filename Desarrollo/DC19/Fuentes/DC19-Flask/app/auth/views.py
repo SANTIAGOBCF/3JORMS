@@ -59,6 +59,8 @@ def register():
         answer = req('GET', url).json()
         full_name_dni = answer.get('nombres') + " " + answer.get("apellidoPaterno") + " " + answer.get('apellidoMaterno')
         cui_dni = answer.get('codVerifica')
+        if not cui_dni.isnumeric(): # cui no fue encontrado por la API
+            cui_dni = int(form.cui.data)
         if form.full_name.data.lower() == full_name_dni.lower() and int(form.cui.data) == int(cui_dni):
             user = User(email=form.email.data,
                         alias=form.alias.data,
