@@ -39,6 +39,11 @@ i {
 
 }
 
+#override .container-aux {
+    margin: 0;
+    padding: 0;
+}
+
 
 .form-new-topic, .new-topic-head {
     padding: 10px 10px;
