@@ -55,12 +55,21 @@ def logout():
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        url = "https://dniruc.apisperu.com/api/v1/dni/" + form.dni.data + "?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InlpaHNpY0BnbWFpbC5jb20ifQ.JtcQWJs0oWX1bFMoxtfIDwooMXcbqeRBKTJADq7-p5Y"
+        # API PERU: fails
+        # url = "https://dniruc.apisperu.com/api/v1/dni/" + form.dni.data + "?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InlpaHNpY0BnbWFpbC5jb20ifQ.JtcQWJs0oWX1bFMoxtfIDwooMXcbqeRBKTJADq7-p5Y"
+        # answer = req('GET', url).json()
+        # full_name_dni = answer.get('nombres') + " " + answer.get("apellidoPaterno") + " " + answer.get('apellidoMaterno')
+        # cui_dni = answer.get('codVerifica')
+        
+        # OPTIMIZE PERY
+        url = "https://dni.optimizeperu.com/api/persons/" + form.dni.data
         answer = req('GET', url).json()
-        full_name_dni = answer.get('nombres') + " " + answer.get("apellidoPaterno") + " " + answer.get('apellidoMaterno')
-        cui_dni = answer.get('codVerifica')
+        full_name_dni = answer.get('name') + " " + answer.get("first_name") + " " + answer.get('last_name')
+        cui_dni = answer.get('cui')
+        
         if not cui_dni.isnumeric(): # cui no fue encontrado por la API
             cui_dni = int(form.cui.data)
+
         if form.full_name.data.lower() == full_name_dni.lower() and int(form.cui.data) == int(cui_dni):
             user = User(email=form.email.data,
                         alias=form.alias.data,
@@ -76,6 +85,7 @@ def register():
             flash('Se le ha enviado un correo electrónico de confirmación por correo electrónico.')
             return redirect(url_for('auth.login'))
         else:
+            print(full_name_dni)
             flash('El nombre no coincide con el DNI-CUI.')
     return render_template('auth/register.html', form=form)
 
