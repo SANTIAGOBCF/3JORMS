@@ -78,3 +78,23 @@ def edit_profile_admin(id):
     form.about_me.data = user.about_me
     return render_template('edit_profile.html', form=form, user=user)
 
+@main.route('/chat', methods=['GET', 'POST'])
+@login_required
+def chat():
+    return render_template('main-chat.html')
+
+
+@main.route('/group_chat', methods=['GET', 'POST'])
+@login_required
+def group_chat():
+    return render_template('group-chat.html')
+
+@main.route('/foro', methods=['GET', 'POST'])
+@login_required
+def foro():
+    return render_template('foro.html')
+
+@main.route('/topic', methods=['GET', 'POST'])
+@login_required
+def topic():
+    return render_template('topic.html')
