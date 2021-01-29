@@ -8,13 +8,13 @@ from ..models import Role, User
 
 
 class NameForm(FlaskForm):
-    name = StringField('What is your name?', validators=[DataRequired()])
+    name = StringField('Cual es tu nombre?', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 
 class PostForm(FlaskForm):
-    body = PageDownField("What's on your mind?", validators=[DataRequired()])
-    submit = SubmitField('Submit')
+    body = PageDownField("Haz una publicación:", validators=[DataRequired()])
+    submit = SubmitField('Publicar')
 
 
 class EditProfileForm(FlaskForm):

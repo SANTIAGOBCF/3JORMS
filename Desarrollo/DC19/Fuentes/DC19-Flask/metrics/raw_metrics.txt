@@ -1,0 +1,300 @@
+config.py
+    LOC: 48
+    LLOC: 27
+    SLOC: 35
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 13
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+dc19.py
+    LOC: 30
+    LLOC: 20
+    SLOC: 19
+    Comments: 0
+    Single comments: 1
+    Multi: 0
+    Blank: 10
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+testing-app.py
+    LOC: 15
+    LLOC: 12
+    SLOC: 12
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 3
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+app\decorators.py
+    LOC: 22
+    LLOC: 15
+    SLOC: 15
+    Comments: 2
+    Single comments: 1
+    Multi: 0
+    Blank: 6
+    - Comment Stats
+        (C % L): 9%
+        (C % S): 13%
+        (C + M % L): 9%
+app\email.py
+    LOC: 20
+    LLOC: 15
+    SLOC: 16
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 4
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+app\fake.py
+    LOC: 37
+    LLOC: 24
+    SLOC: 33
+    Comments: 1
+    Single comments: 0
+    Multi: 0
+    Blank: 4
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 3%
+        (C + M % L): 3%
+app\models.py
+    LOC: 215
+    LLOC: 169
+    SLOC: 174
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 41
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+app\__init__.py
+    LOC: 37
+    LLOC: 30
+    SLOC: 30
+    Comments: 1
+    Single comments: 0
+    Multi: 0
+    Blank: 7
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 3%
+        (C + M % L): 3%
+app\auth\forms.py
+    LOC: 73
+    LLOC: 47
+    SLOC: 57
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 16
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+app\auth\views.py
+    LOC: 179
+    LLOC: 138
+    SLOC: 153
+    Comments: 2
+    Single comments: 2
+    Multi: 0
+    Blank: 24
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 1%
+app\auth\__init__.py
+    LOC: 5
+    LLOC: 3
+    SLOC: 3
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 2
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+app\main\errors.py
+    LOC: 16
+    LLOC: 11
+    SLOC: 11
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 5
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+app\main\forms.py
+    LOC: 55
+    LLOC: 33
+    SLOC: 42
+    Comments: 2
+    Single comments: 2
+    Multi: 0
+    Blank: 11
+    - Comment Stats
+        (C % L): 4%
+        (C % S): 5%
+        (C + M % L): 4%
+app\main\views.py
+    LOC: 80
+    LLOC: 62
+    SLOC: 66
+    Comments: 5
+    Single comments: 5
+    Multi: 0
+    Blank: 9
+    - Comment Stats
+        (C % L): 6%
+        (C % S): 8%
+        (C + M % L): 6%
+app\main\__init__.py
+    LOC: 11
+    LLOC: 7
+    SLOC: 7
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 4
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+metrics\main.py
+    LOC: 106
+    LLOC: 33
+    SLOC: 33
+    Comments: 62
+    Single comments: 62
+    Multi: 0
+    Blank: 11
+    - Comment Stats
+        (C % L): 58%
+        (C % S): 188%
+        (C + M % L): 58%
+migrations\env.py
+    LOC: 96
+    LLOC: 36
+    SLOC: 46
+    Comments: 15
+    Single comments: 15
+    Multi: 12
+    Blank: 23
+    - Comment Stats
+        (C % L): 16%
+        (C % S): 33%
+        (C + M % L): 28%
+migrations\versions\5cc3817a44eb_initial_migration.py
+    LOC: 72
+    LLOC: 23
+    SLOC: 54
+    Comments: 5
+    Single comments: 5
+    Multi: 5
+    Blank: 8
+    - Comment Stats
+        (C % L): 7%
+        (C % S): 9%
+        (C + M % L): 14%
+scripts\server_test.py
+    LOC: 15
+    LLOC: 12
+    SLOC: 12
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 3
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+scripts\__init__.py
+    LOC: 0
+    LLOC: 0
+    SLOC: 0
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+tests\test_basics.py
+    LOC: 22
+    LLOC: 17
+    SLOC: 17
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 5
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+tests\test_login.py
+    LOC: 64
+    LLOC: 0
+    SLOC: 0
+    Comments: 54
+    Single comments: 54
+    Multi: 0
+    Blank: 10
+    - Comment Stats
+        (C % L): 84%
+        (C % S): 5400%
+        (C + M % L): 84%
+tests\test_user_model.py
+    LOC: 158
+    LLOC: 135
+    SLOC: 137
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 21
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+tests\__init__.py
+    LOC: 0
+    LLOC: 0
+    SLOC: 0
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+** Total **
+    LOC: 1376
+    LLOC: 869
+    SLOC: 972
+    Comments: 149
+    Single comments: 147
+    Multi: 17
+    Blank: 240
+    - Comment Stats
+        (C % L): 11%
+        (C % S): 15%
+        (C + M % L): 12%

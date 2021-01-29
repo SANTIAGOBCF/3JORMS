@@ -1,0 +1,171 @@
+
+#override .form-control {
+    margin-bottom: 0;
+}
+
+#override.content-body {
+    padding: 0;
+}
+
+.groups-list {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.groups-list img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.groups-list h5 {
+    font-size: 1em;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.groups-list p {
+    color: #ccc;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+#override .chat-side-panel {
+    background-color: #333;
+    padding: 30px 15px;
+    color: #eee;
+}
+#override .chat-side-panel a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.group {
+    display: flex;
+    flex-direction: row;
+    height: 85px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.group:hover {
+    background-color: #444;
+    transition: 200ms;
+}
+
+.chat-main-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-group-title {
+    background-color: #333;
+    color: #eee;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.chat-group-title:hover {
+    background-color: rgb(61, 61, 61);
+}
+
+.chat-group-title h5 {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-left: 15px;
+    margin-bottom: 0;
+}
+
+.chat-group-title img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.chat-msg {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.msg {
+    border-top: 1px solid #eee;
+    display: flex;
+    padding: 10px 20px;
+}
+
+.msg img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.msg-content {
+    margin-left: 10px;
+}
+
+.msg-content {
+    font-size: 0.9em;
+}
+
+.msg-username {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.msg-content p{
+    margin: 0;
+}
+
+.msg-date {
+    color: rgb(148, 148, 148);
+}
+
+.chat-send-msg {
+    border: 1px solid rgb(216, 216, 216);
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.chat-send-msg input[type='text'] {
+    border:none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    border-radius: 10px;
+    background-color: rgb(230, 230, 230);
+    height: 100%;
+    padding: 0 8px;
+    flex-grow: 1;
+    transition: background-color 100ms;
+
+}
+
+input:focus {
+    outline: none;
+}
+
+.chat-send-msg .btn {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
+}
+
+.chat-send-msg input[type='text']:hover {
+    background-color: rgb(219, 219, 219);
+}
+
