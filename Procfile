@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath '/Desarrollo/DC19/Fuentes/DC19-Flask/' DC19-Flask.dc19:app
+web: gunicorn --chdir '/Desarrollo/DC19/Fuentes/DC19-Flask/' dc19:app
