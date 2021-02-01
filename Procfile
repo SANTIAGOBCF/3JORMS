@@ -1,1 +1,1 @@
-web: sh -c 'cd ./Desarrollo/DC19/Fuentes/DC19-Flask/ && exec dc19'
+web: gunicorn --pythonpath '/Desarrollo/DC19/Fuentes/DC19-Flask/' DC19-Flask.dc19:app
