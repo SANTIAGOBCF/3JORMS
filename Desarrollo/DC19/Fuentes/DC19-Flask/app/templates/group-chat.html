@@ -8,7 +8,11 @@
 {% block title %} Grupo 1 {% endblock %}
 
 {% block page_content %}
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
 <div class="container-fluid row h-100">
     <div class="col-12 col-sm-5 col-md-4 col-lg-3 chat-side-panel">
         <div class="head-chat-side">
@@ -91,41 +95,37 @@
             </div>
           </div>
 
-        <div class="chat-msg">
-            <div class="msg">
-                <div>
-                    <img src="{{ url_for('static', filename = 'img/covid-19.jpg') }}" alt="grupo">
-                </div>
-                <div class="msg-content">
-                    <div>
-                        <span class="msg-username">Usuario</span>
-                        <small class="msg-date float-right">14 Marzo, 2020. 21:13</small>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellat omnis sit nisi in, voluptates adipisci maxime doloremque dolorum dolore culpa reiciendis! Nulla asperiores sit, tempore assumenda id, voluptates eum officiis adipisci atque laborum a eveniet molestiae labore unde dolorem. Veritatis voluptatum, incidunt consequuntur temporibus unde placeat molestiae optio ipsum!
-                    </p>
-                </div>
-            </div>
-            <div class="msg">
-                <div>
-                    <img src="{{ url_for('static', filename = 'img/covid-19.jpg') }}" alt="grupo">
-                </div>
-                <div class="msg-content">
-                    <div>
-                        <span class="msg-username">Usuario</span>
-                        <small class="msg-date float-right">14 Marzo, 2020. 21:13</small>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellat omnis sit nisi in, voluptates adipisci maxime doloremque dolorum dolore culpa reiciendis! Nulla asperiores sit, tempore assumenda id, voluptates eum officiis adipisci atque laborum a eveniet molestiae labore unde dolorem. Veritatis voluptatum, incidunt consequuntur temporibus unde placeat molestiae optio ipsum!
-                    </p>
-                </div>
-            </div>
+        <div class="chat-msg" id="messages">
             
         </div>
         <div class="chat-send-msg">
-            <input type="text">
-            <a href="" class="btn btn-dark"></a>
+            <input type="text" id="myMessage">
+            <button id="send" class="btn btn-dark" ></button>
+            <!--<a href="" id="send" class="btn btn-dark"></a>-->
         </div>
+        <script>
+                var socket = io()
+            
+                socket.on('message', function(msg) {
+                $('#messages').prepend(
+                '<div class="msg">'+ 
+                '<div><img src="{{ url_for('static', filename = 'img/covid-19.jpg') }}" alt="grupo"></div>'+
+                '<div class="msg-content">' +
+                '<div>'+
+                '<span class="msg-username">{{ current_user.alias }}</span>'+
+                '<small class="msg-date float-right">14 Marzo, 2020. 21:13</small>'+
+                '</div>'+ 
+                '<p>'+
+                msg +
+                '</p>'+
+                '</div></div>')
+                })
+
+                $('#send').on('click', function() {
+                socket.send($('#myMessage').val());
+                $('#myMessage').val('');
+                })
+        </script>
     </div>
     
 </div>
