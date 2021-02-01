@@ -11,8 +11,8 @@
 <script src="http://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
 <div class="container-fluid row h-100">
     <div class="col-12 col-sm-5 col-md-4 col-lg-3 chat-side-panel">
         <div class="head-chat-side">
@@ -104,7 +104,7 @@ crossorigin="anonymous"></script>
             <!--<a href="" id="send" class="btn btn-dark"></a>-->
         </div>
         <script>
-            const socket = io()
+                var socket = io()
             
                 socket.on('message', function(msg) {
                 $('#messages').prepend(
@@ -112,7 +112,7 @@ crossorigin="anonymous"></script>
                 '<div><img src="{{ url_for('static', filename = 'img/covid-19.jpg') }}" alt="grupo"></div>'+
                 '<div class="msg-content">' +
                 '<div>'+
-                '<span class="msg-username">Usuario</span>'+
+                '<span class="msg-username">{{ current_user.alias }}</span>'+
                 '<small class="msg-date float-right">14 Marzo, 2020. 21:13</small>'+
                 '</div>'+ 
                 '<p>'+
