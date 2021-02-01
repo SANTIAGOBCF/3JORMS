@@ -8,7 +8,10 @@ from app.models import User, Role, Permission, Post
 
 app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 migrate = Migrate(app, db)
-
+if __name__ == "__main__":
+     app.debug = False
+     port = int(os.environ.get('PORT', 33507))
+     waitress.serve(app, port=port)
 
 @app.shell_context_processor
 def make_shell_context():
