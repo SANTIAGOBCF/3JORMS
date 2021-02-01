@@ -1,6 +1,7 @@
 import os
 
 import click
+import waitress
 from flask_migrate import Migrate
 
 from app import create_app, db
@@ -27,4 +28,7 @@ def test(test_names):
     unittest.TextTestRunner(verbosity=2).run(tests)
 
 
-
+if __name__ == "__main__":
+    app.debug = False
+    port = int(os.environ.get('PORT', 33507))
+    waitress.serve(app, port=port)
