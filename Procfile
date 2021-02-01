@@ -1,0 +1,1 @@
+web: sh -c 'cd ./Desarrollo/DC19/Fuentes/DC19-Flask/ && exec dc19'
