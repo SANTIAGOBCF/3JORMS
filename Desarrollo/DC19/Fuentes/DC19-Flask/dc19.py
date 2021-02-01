@@ -1,7 +1,7 @@
 import os
 
 import click
-import waitress
+# import waitress
 from flask_migrate import Migrate
 
 from app import create_app, db
