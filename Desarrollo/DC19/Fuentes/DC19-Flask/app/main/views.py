@@ -5,7 +5,8 @@ from .forms import EditProfileForm, EditProfileAdminForm, PostForm
 from .. import db
 from ..models import User, Role, Post, Permission
 from ..decorators import admin_required
-
+from .. import socketio
+from flask_socketio import send
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
@@ -88,6 +89,11 @@ def chat():
 @login_required
 def group_chat():
     return render_template('group-chat.html')
+
+@socketio.on('message')
+def handleMessage(msg):
+    print('Message: ' + msg)
+    send(msg, broadcast = True)
 
 @main.route('/foro', methods=['GET', 'POST'])
 @login_required
