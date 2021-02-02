@@ -30,8 +30,8 @@ Foro
                 </form>   
             </div>
             <div title="Add topic" class="d-flex align-content-center justify-content-center">
-                <button data-toggle="collapse" data-target="#new-topic-foro" class="btn btn-outline-dark btn-block collapsed newTopicBtn px-5"
-                    aria-expanded="false" aria-controls="new-topic-foro"><em class="fas fa-caret-down" aria-hidden="true"></em></button>
+                <button id="newTopicBtn" data-toggle="collapse" data-target="#new-topic-foro" class="btn btn-outline-dark btn-block collapsed newTopicBtn px-5"
+                    aria-expanded="false" aria-controls="new-topic-foro">▼</button>
             </div>
     
             <!-- POPULAR TOPICS -->
@@ -188,7 +188,19 @@ Foro
     </div>
 </div>
 
-
+<script>
+    var btnNew = document.getElementById('newTopicBtn');
+    var clics = 0;
+    
+    btnNew.onclick = function(){
+        clics++;
+        if(clics % 2 === 0){
+            btnNew.innerHTML = `▼`;
+        }else{
+            btnNew.innerHTML = `▲`;
+        }
+    }
+</script>
 
 
 
