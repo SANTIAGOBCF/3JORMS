@@ -13,8 +13,8 @@
 <div class="container-index">
     <div class="page-header">
     {#    <h1>Hello, {% if current_user.is_authenticated %}{{ current_user.alias }}{% else %}Stranger{% endif %}!</h1>#}
-        <h1><b>Difusión COVID19📢</b></h1>
-        <h3>{% if current_user.is_authenticated %} Hola, <b>@{{ current_user.alias }}</b> {% else %}¡Bienvenido!{% endif %}</h3>
+        <h1 class="text-center mb-4"><b>Difusión COVID19📢</b></h1>
+        <h3 class="text-center">{% if current_user.is_authenticated %} Hola, <b>@{{ current_user.alias }}</b> {% else %}¡Bienvenido!{% endif %}</h3>
     </div>
     
     <div>
