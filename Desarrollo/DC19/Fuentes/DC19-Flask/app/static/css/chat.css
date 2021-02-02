@@ -158,11 +158,24 @@ input:focus {
     outline: none;
 }
 
-.chat-send-msg .btn {
+#send {
     border-radius: 50%;
     width: 30px;
     height: 30px;
     margin-left: 8px;
+    padding: 0;
+}
+
+#send i{
+    color: #fff;
+    position: relative;
+    bottom: 1px;
+    right: 1px;
+    transition: background-color 100ms;
+}
+
+#send:hover {
+    background-color: #fff;
 }
 
 .chat-send-msg input[type='text']:hover {

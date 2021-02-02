@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -204,5 +211,44 @@ footer a:hover {
    background-color: rgb(46, 46, 46);
    color: #ddd;
  }
+
+ /*INDEX STYLES******************************************/
+
+ .container-index {
+   padding: 10px 25px;
+ }
+
+ .post-author {
+   font-family: 'Archivo', sans-serif;
+ }
+
+ .post-content {
+   font-size: 0.92em;
+ }
+
+ h1, h2, h3 {
+   font-family: 'Archivo', sans-serif;
+ }
+
+ .navbar li a{
+   font-family: 'Archivo', sans-serif;
+ }
+
+ .navbar .navbar-brand {
+   font-family: 'Archivo', sans-serif;
+    font-size: 1.6em;
+ }
+
+ .nav-item {
+   padding: 5px 5px;
+ }
+
+ .btn {
+   border-radius: 20px;
+   padding: 7px 20px;
+ }
+
+
+
  
 /*# sourceMappingURL=config-init.css.map */

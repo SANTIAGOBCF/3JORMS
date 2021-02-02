@@ -12,7 +12,7 @@
 
 {% block navbar %}
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark" id="topbar">
     <div class="container-fluid container-sm">
       <a class="navbar-brand" href="{{ url_for('main.index') }}">DC19</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -28,6 +28,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('main.foro') }}">Foro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('main.group_chat') }}">Chat grupal</a>
           </li>
           
         </ul>
