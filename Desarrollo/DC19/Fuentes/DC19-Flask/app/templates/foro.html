@@ -14,8 +14,8 @@ Foro
 <div class="container container-aux">
     <div class="row" style="display:flex; align-items: flex-start;">
         <div class="col-12 col-sm-5 col-md-4 col-lg-3 sidebar-foro">
-            <h5 class="new-topic-head">Añadir nuevo tema</h5>
-            <div class="new-topic collapse" id="new-topic-foro">   
+            <h6 class="new-topic-head text-center" style="font-size: 1.2em;">Nuevo tema</h6>
+            <div class="new-topic collapse bg-dark" id="new-topic-foro">   
     
                 <form class="form-new-topic" action="">
                     <input type="text" class="form-control" name="in-new-topic" id="in-new-topic" placeholder="Nuevo tema...">
@@ -26,7 +26,7 @@ Foro
                         <input type="file" class="custom-file-input" id="customFile">
                         <label class="custom-file-label" for="customFile">Añadir imagen</label>
                     </div>
-                    <button type="submit" class="btn btn-dark btn-block">Añadir</button>
+                    <button type="submit" class="btn btn-white btn-block">Añadir</button>
                 </form>   
             </div>
             <div title="Add topic" class="d-flex align-content-center justify-content-center">
@@ -41,15 +41,16 @@ Foro
                 </div>
                 <div class="popular-topic-content">
                     <ul>
+                        
                         <li>
                             <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid"> 
                             <div>
                                 <div>
                                     Título 1
                                 </div>
-                                <div>
+                                <small>
                                     100 comentarios
-                                </div>
+                                </small>
                             </div> 
                         </li>
                         <li>
@@ -58,9 +59,9 @@ Foro
                                 <div>
                                     Título 1
                                 </div>
-                                <div>
+                                <small>
                                     100 comentarios
-                                </div>
+                                </small>
                             </div> 
                         </li>
                         <li>
@@ -69,45 +70,14 @@ Foro
                                 <div>
                                     Título 1
                                 </div>
-                                <div>
+                                <small>
                                     100 comentarios
-                                </div>
+                                </small>
                             </div> 
                         </li>
-                        <li>
-                            <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid"> 
-                            <div>
-                                <div>
-                                    Título 1
-                                </div>
-                                <div>
-                                    100 comentarios
-                                </div>
-                            </div> 
-                        </li>
-                        <li>
-                            <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid"> 
-                            <div>
-                                <div>
-                                    Título 1
-                                </div>
-                                <div>
-                                    100 comentarios
-                                </div>
-                            </div> 
-                        </li>
-                        <li>
-                            <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid"> 
-                            <div>
-                                <div>
-                                    Título 1
-                                </div>
-                                <div>
-                                    100 comentarios
-                                </div>
-                            </div> 
-                        </li>
-                        <button class="btn btn-light">Ver más &rAarr;</button>
+                        <div class="p-2">
+                            <button class="btn btn-outline-dark btn-block p-1" style="font-size: 0.9em;">Ver más &rAarr;</button>
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -118,22 +88,7 @@ Foro
                 <div class="topic-foro">
                 
                     <small>Añadido hace 10 horas</small>
-                    <h4>Título del tema</h4>
-                    <div>
-                        <img class="img-topic" src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid-19">
-                    </div>
-                    <ul class="foot-topic">
-                        <li><i class="far fa-comment-alt"></i>10 Comentarios</li>
-                    </ul>
-                </div>
-            </a>
-    
-        
-            <a href="{{ url_for('main.topic') }}">
-                <div class="topic-foro">
-                
-                    <small>Añadido hace 10 horas</small>
-                    <h4>Título del tema</h4>
+                    <h3>Título del tema</h3>
                     <div>
                         <img class="img-topic" src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid-19">
                     </div>
@@ -147,7 +102,7 @@ Foro
                 <div class="topic-foro">
                 
                     <small>Añadido hace 10 horas</small>
-                    <h4>Título del tema</h4>
+                    <h3>Título del tema</h3>
                     <div>
                         <img class="img-topic" src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid-19">
                     </div>
@@ -156,12 +111,12 @@ Foro
                     </ul>
                 </div>
             </a>
-    
+
             <a href="{{ url_for('main.topic') }}">
                 <div class="topic-foro">
                 
                     <small>Añadido hace 10 horas</small>
-                    <h4>Título del tema</h4>
+                    <h3>Título del tema</h3>
                     <div>
                         <img class="img-topic" src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid-19">
                     </div>
@@ -170,20 +125,7 @@ Foro
                     </ul>
                 </div>
             </a>
-    
-            <a href="{{ url_for('main.topic') }}">
-                <div class="topic-foro">
-                
-                    <small>Añadido hace 10 horas</small>
-                    <h4>Título del tema</h4>
-                    <div>
-                        <img class="img-topic" src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid-19">
-                    </div>
-                    <ul class="foot-topic">
-                        <li><i class="far fa-comment-alt"></i>10 Comentarios</li>
-                    </ul>
-                </div>
-            </a>
+            
         </div>
     </div>
 </div>
