@@ -35,3 +35,11 @@
     transition: 150ms ease-in-out all;
     background-color: rgb(75, 75, 75);
 }
+
+.alert.alert-warning {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
