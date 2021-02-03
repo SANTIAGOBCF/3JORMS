@@ -16,6 +16,9 @@ class Config:
     DC19_ADMIN = os.environ.get('DC19_ADMIN')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DC19_POSTS_PER_PAGE = 5
+    MAX_IMG_CONTENT_LENGTH = 1024 * 1024
+    UPLOAD_IMG_EXTENSIONS = ['.jpg', '.png', '.gif']
+    UPLOAD_IMG_PATH = 'app/uploads/img'
 
     @staticmethod
     def init_app(app):
