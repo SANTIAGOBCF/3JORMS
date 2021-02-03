@@ -236,7 +236,8 @@ footer a:hover {
 
  .navbar .navbar-brand {
    font-family: 'Archivo', sans-serif;
-    font-size: 1.6em;
+    font-size: 1.7em;
+    font-weight: 700;
  }
 
  .nav-item {
@@ -254,6 +255,37 @@ footer a:hover {
   margin-top: 20px;
   padding: 8px 20px;
 }
+
+.dropdown-toggle {
+  color: #ccc;
+}
+
+.dropdown-toggle:hover {
+  transition: 100ms ease-in-out all;
+  color: #fff;
+}
+
+.dropdown-menu > .dropdown-item {
+  font-size: 0.92em;
+  padding: 5px 15px;
+}
+
+.dropdown-menu i {
+  width: 15px;
+}
+
+
+@media (max-width: 768px) {
+  .navbar .btn-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .navbar .btn {
+    width: 50%;
+  }
+}
+
 
  
 /*# sourceMappingURL=config-init.css.map */
