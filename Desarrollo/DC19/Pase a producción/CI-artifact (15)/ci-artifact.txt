@@ -1,0 +1,56 @@
+DC19 Artifact: Continous Integrations
+-----------------------------------------------------------------
+
+
+Tests results
+-------------
+test_app_exists (tests.test_basics.BasicsTestCase) ... ok
+test_app_is_testing (tests.test_basics.BasicsTestCase) ... ok
+test_administrator_role (tests.test_user_model.UserModelTestCase) ... ok
+test_anonymous_user (tests.test_user_model.UserModelTestCase) ... ok
+test_duplicate_email_change_token (tests.test_user_model.UserModelTestCase) ... ok
+test_expired_confirmation_token (tests.test_user_model.UserModelTestCase) ... ok
+test_invalid_confirmation_token (tests.test_user_model.UserModelTestCase) ... ok
+test_invalid_email_change_token (tests.test_user_model.UserModelTestCase) ... ok
+test_invalid_reset_token (tests.test_user_model.UserModelTestCase) ... ok
+test_moderator_role (tests.test_user_model.UserModelTestCase) ... ok
+test_no_password_getter (tests.test_user_model.UserModelTestCase) ... ok
+test_password_salts_are_random (tests.test_user_model.UserModelTestCase) ... ok
+test_password_setter (tests.test_user_model.UserModelTestCase) ... ok
+test_password_verification (tests.test_user_model.UserModelTestCase) ... ok
+test_ping (tests.test_user_model.UserModelTestCase) ... ok
+test_timestamps (tests.test_user_model.UserModelTestCase) ... ok
+test_user_role (tests.test_user_model.UserModelTestCase) ... ok
+test_valid_confirmation_token (tests.test_user_model.UserModelTestCase) ... ok
+test_valid_email_change_token (tests.test_user_model.UserModelTestCase) ... ok
+test_valid_reset_token (tests.test_user_model.UserModelTestCase) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 7.200s
+
+OK
+
+
+Coverage results
+----------------
+Name                                                          Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------------------------------
+Desarrollo/DC19/Fuentes/DC19-Flask/app/__init__.py               30      0   100%
+Desarrollo/DC19/Fuentes/DC19-Flask/app/auth/__init__.py           3      0   100%
+Desarrollo/DC19/Fuentes/DC19-Flask/app/auth/forms.py             47      8    83%   31-32, 35-36, 39-40, 72-73
+Desarrollo/DC19/Fuentes/DC19-Flask/app/auth/views.py            132     94    29%   14-19, 24-26, 31-43, 49-51, 56-78, 84-91, 97-101, 107-117, 122-134, 139-149, 155-168, 174-179
+Desarrollo/DC19/Fuentes/DC19-Flask/app/decorators.py             15      3    80%   11-13
+Desarrollo/DC19/Fuentes/DC19-Flask/app/email.py                  15      9    40%   8-9, 13-20
+Desarrollo/DC19/Fuentes/DC19-Flask/app/main/__init__.py           7      1    86%   11
+Desarrollo/DC19/Fuentes/DC19-Flask/app/main/errors.py            11      3    73%   7, 11, 16
+Desarrollo/DC19/Fuentes/DC19-Flask/app/main/forms.py             33      7    79%   42-45, 48-50, 53-55
+Desarrollo/DC19/Fuentes/DC19-Flask/app/main/views.py             62     44    29%   12-25, 31-33, 39-51, 58-79
+Desarrollo/DC19/Fuentes/DC19-Flask/app/models.py                165     15    91%   13, 30, 37-38, 109, 119, 133, 164, 178-179, 184, 201-203, 212
+Desarrollo/DC19/Fuentes/DC19-Flask/config.py                     26      0   100%
+Desarrollo/DC19/Fuentes/DC19-Flask/scripts/__init__.py            0      0   100%
+Desarrollo/DC19/Fuentes/DC19-Flask/tests/__init__.py              0      0   100%
+Desarrollo/DC19/Fuentes/DC19-Flask/tests/test_basics.py          17      0   100%
+Desarrollo/DC19/Fuentes/DC19-Flask/tests/test_login.py            0      0   100%
+Desarrollo/DC19/Fuentes/DC19-Flask/tests/test_user_model.py     135      0   100%
+-------------------------------------------------------------------------------------------
+TOTAL                                                           698    184    74%
