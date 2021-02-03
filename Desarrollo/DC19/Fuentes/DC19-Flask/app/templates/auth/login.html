@@ -1,9 +1,14 @@
 {% extends "base.html" %} 
 {% import "bootstrap/wtf.html" as wtf %}
+
 {% block head %} 
 {{super()}}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}"> 
-{% endblock %} {% block title %}DC19 - Iniciar Sesión{% endblock %} {% block page_content %}
+{% endblock %} 
+
+{% block title %}DC19 - Iniciar Sesión{% endblock %} 
+
+{% block page_content %}
 
 <div class="super-container-centrar">
     <div class="container-centrar">
