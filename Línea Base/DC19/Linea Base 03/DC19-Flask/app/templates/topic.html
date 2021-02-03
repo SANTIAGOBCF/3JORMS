@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/topic.css') }}">
+{% endblock %}
+
+{% block title %}
+<b>Título del tema</b> 
+{% endblock %}
+
+
+{% block page_content %}
+<div class="container-fluid container-md">
+    <div class="row" style="align-items: flex-start;">
+        <div class="col-12 col-sm-5 col-md-4 col-lg-3 sidebar-topic">
+            <div class="desc-topic">
+                <div class="desc-content">ESTA ES LA DESCRIPCIÓN DEL TEMA. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem tempora vitae esse autem accusantium perspiciatis in veniam quos vel eius aperiam a officia illum, sit earum eligendi explicabo velit ullam dignissimos atque eos. Soluta illo harum, velit assumenda, unde suscipit amet autem iste itaque sint ex molestiae vitae! Odit, quisquam?</div>
+                <div class="desc-footer row text-center">
+                    <div class="col-6"><span>10</span><br><small>Comentarios</small></div>
+                    <div class="col-6"><span>10</span><br><small>Usuarios</small></div>
+                </div>
+            </div>
+            <div class="users-topic mt-2">
+                <div class="users-topic-head">Participantes</div>
+                <div class="users-topic-content">
+                    <ul>
+                        <li>
+                            <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid"> 
+                            <div>
+                                <div class="mt-2">
+                                    Jhon Brown
+                                </div>
+                            </div> 
+                        </li>
+                        <li>
+                            <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid"> 
+                            <div>
+                                <div class="mt-2">
+                                    Jhon Brown
+                                </div>
+                            </div> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-7 col-md-8 col-lg-9 content-topic">
+            <div class="main-topic">
+                <small>Añadido hace 10 horas</small>
+                <h4>Título del tema</h4>
+                <div>
+                    <img class="img-topic" src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid-19">
+                </div>
+            </div>
+            <div class="new-comment-topic">
+                <form action="">
+                    <textarea class="form-control" name="" id="" cols="30" rows="3" placeholder="Nuevo Comentario..."></textarea>
+                    <a href="#" class="btn btn-dark">Comentar</a>
+                </form>
+            </div>
+            <hr>
+            <div class="comments-topic">
+                <div class="media border p-3 comment">
+                    <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Jhon Brown" class="mr-3 mt-1">
+                    <div class="media-body">
+                      <h6>Jhon Brown <small><i>Posted on February 19, 2016</i></small></h6>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum voluptate voluptas iusto praesentium consequatur repudiandae a aliquid ducimus nostrum, laudantium neque quo eum quasi vel voluptates perferendis reiciendis minus temporibus nemo quae itaque libero! Tempora, vitae rem molestiae cum suscipit voluptatibus molestias quam consequatur debitis, provident unde totam nam? Enim!</p>
+                    </div>
+                </div>
+                <div class="media border p-3">
+                    <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Jhon Brown" class="mr-3 mt-1">
+                    <div class="media-body">
+                      <h6>Jhon Brown <small><i>Posted on February 19, 2016</i></small></h6>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum voluptate voluptas iusto praesentium consequatur repudiandae a aliquid ducimus nostrum, laudantium neque quo eum quasi vel voluptates perferendis reiciendis minus temporibus nemo quae itaque libero! Tempora, vitae rem molestiae cum suscipit voluptatibus molestias quam consequatur debitis, provident unde totam nam? Enim!</p>
+                    </div>
+                </div>
+                <div class="media border p-3">
+                    <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Jhon Brown" class="mr-3 mt-1">
+                    <div class="media-body">
+                      <h6>Jhon Brown <small><i>Posted on February 19, 2016</i></small></h6>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum voluptate voluptas iusto praesentium consequatur repudiandae a aliquid ducimus nostrum, laudantium neque quo eum quasi vel voluptates perferendis reiciendis minus temporibus nemo quae itaque libero! Tempora, vitae rem molestiae cum suscipit voluptatibus molestias quam consequatur debitis, provident unde totam nam? Enim!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

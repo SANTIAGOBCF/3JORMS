@@ -1,0 +1,96 @@
+i {
+    margin-right: 5px;
+}
+
+.foro-topics a {
+    color: inherit;
+}
+
+.foro-topics a:hover {
+    text-decoration: none;
+}
+
+.topic-foro {
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 8px;
+    padding: 30px 20px;
+    margin-bottom: 15px;
+}
+
+.topic-foro:hover {
+    border-color: rgb(197, 197, 197);
+    background-color: rgb(243, 243, 243);
+    cursor: pointer;
+}
+
+#override .row > div {
+    padding: 0 5px;
+}
+
+#override .sidebar-foro {
+    position: sticky;
+    top: 10px;
+}
+
+#override .sidebar-foro > div {
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 8px;
+    margin-bottom: 10px;
+
+}
+
+#override .container-aux {
+    margin: 0;
+    padding: 0;
+}
+
+
+.form-new-topic, .new-topic-head {
+    padding: 10px 10px;
+}
+
+
+
+.new-topic-head {
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+
+.img-topic {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.popular-topic-content img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    float: left;
+}
+
+.popular-topic > div {
+    padding: 10px 10px;
+    border-bottom: 1px solid rgb(218, 218, 218);
+
+}
+
+
+@media (max-width: 576px) {
+    .popular-topic {
+        display: none;
+    }
+
+    #override .sidebar-foro {
+        position: static;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    #override .container-fluid.content {
+        padding: 20px 0;
+    }
+}
