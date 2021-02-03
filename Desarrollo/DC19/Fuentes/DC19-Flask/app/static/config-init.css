@@ -274,6 +274,10 @@ footer a:hover {
   width: 15px;
 }
 
+.img-rounded {
+  border-radius: 15%;
+}
+
 
 @media (max-width: 768px) {
   .navbar .btn-group {

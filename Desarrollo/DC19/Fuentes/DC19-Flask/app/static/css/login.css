@@ -2,8 +2,8 @@
     display: none;
 }
 
-#override.content-body {
-    background-color: #ddd;
+#override.content-body, body {
+    background-color: rgb(70, 70, 70);
 }
 
 .super-container-centrar {
@@ -43,3 +43,4 @@
     left: 0;
     text-align: center;
 }
+
