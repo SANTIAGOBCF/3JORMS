@@ -21,12 +21,22 @@
         padding: 20px;
         text-align: center;
     }
+    
+    .container-button .btn {
+        background-color: #333;
+        color: #eee;
+    }
+    
+    .container-button .btn:hover {
+        transition: 150ms ease-in-out all;
+        background-color: rgb(75, 75, 75);
+    }
 </style>
 
 <div class="page-header">
     <h1>Edita Tu Perfil</h1>
 </div>
-<div class="col-md-4">
+<div class="col-md-4 container-button">
     {{ wtf.quick_form(form) }}
 
 
