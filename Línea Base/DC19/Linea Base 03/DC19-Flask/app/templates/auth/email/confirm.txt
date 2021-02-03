@@ -1,0 +1,13 @@
+Estimado {{ user.username }},
+
+¡Bienvenido a DC19!
+
+Para confirmar su cuenta haga click en el siguiente link:
+
+{{ url_for('auth.confirm', token=token, _external=True) }}
+
+Atentamente,
+
+El equipo de DC19
+
+Nota: Las respuestas a esta dirección de correo electrónico no se supervisan.
