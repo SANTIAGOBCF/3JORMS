@@ -37,7 +37,7 @@ def login():
             if next is None or not next.startswith('/'):
                 next = url_for('main.index')
             return redirect(next)
-        flash('Invalid alias or password.')
+        flash('Email o contraseña no son validos. ')
     # print(url_for('auth.login'))
     # return render_template('auth/login.html', form=form)
     return render_template(url_for('auth.login') + '.html', form=form)
