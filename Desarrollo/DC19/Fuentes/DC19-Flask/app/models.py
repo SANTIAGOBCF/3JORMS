@@ -81,6 +81,14 @@ class Post(db.Model):
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
+class Foro(db.Model):
+    __tablename__ = 'foros'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.Text)
+    body = db.Column(db.Text)
+    img = db.Column(db.Text)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
