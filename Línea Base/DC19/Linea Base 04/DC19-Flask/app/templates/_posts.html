@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<ul class="posts">
+    {% for post in posts %}
+    <li class="post">
+        <div class="post-thumbnail">
+            <a href="{{ url_for('.user', alias=post.author.alias) }}">
+                <img class="img-rounded profile-thumbnail" src="{{ post.author.gravatar(size=40) }}">
+            </a>
+        </div>
+        <div class="post-content">
+            <div class="post-date "><small>{{ moment(post.timestamp).fromNow() }}</small></div>
+            <div class="post-author"><a href="{{ url_for('.user', alias=post.author.alias) }}">{{ post.author.alias }}</a></div>
+            <div class="post-body"><p>{{ post.body }}</p> </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

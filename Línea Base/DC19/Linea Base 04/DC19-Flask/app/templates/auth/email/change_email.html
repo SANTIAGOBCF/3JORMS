@@ -1,0 +1,8 @@
+<p>Estimado {{ user.alias }},</p>
+<p>Para confirmar su email haga <a href="{{ url_for('auth.change_email', token=token, _external=True) }}">click
+    here</a>.</p>
+<p>Alternativamente, puede pegar el siguiente enlace en la barra de direcciones de su navegador:</p>
+<p>{{ url_for('auth.change_email', token=token, _external=True) }}</p>
+<p>Atentamente,</p>
+<p>el equipo de DC19</p>
+<p><small>Nota: Las respuestas a este correo no son monitorizadas.</small></p>
