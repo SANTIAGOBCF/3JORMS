@@ -68,7 +68,7 @@ def edit_profile_admin(id):
         user.about_me = form.about_me.data
         db.session.add(user)
         db.session.commit()
-        flash('The profile has been updated.')
+        flash('El perfil ha sido actualizado.')
         return redirect(url_for('.user', alias=user.alias))
     form.email.data = user.email
     form.alias.data = user.alias
