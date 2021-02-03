@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/chat.css') }}">
+{% endblock %}
+
+{% block title %} Chat {% endblock %}
+
+{% block page_content %}
+
+<div class="container-fluid row h-100">
+    <div class="col-12 col-sm-5 col-md-4 col-lg-3 chat-side-panel">
+        <div class="head-chat-side">
+            <div class="search-group">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-append">
+                    <a class="btn btn-dark" type="submit">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="create-group">
+                <div class="new-topic collapse" id="crear-grupo">   
+    
+                    <form class="form-new-topic" action="">
+                        <input type="text" class="form-control mb-3" name="in-new-topic" id="in-new-topic" placeholder="Nombre del grupo...">
+                        <div class="form-group">
+                            <textarea name="topic-description" id="topic-description" cols="30" rows="4" class="form-control" placeholder="Descripción del grupo..."></textarea>
+                        </div>
+                        <div class="custom-file mb-3">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Añadir imagen</label>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block mb-3">Añadir</button>
+                    </form>   
+                </div>
+                <div title="Crear Grupo" class="d-flex align-content-center justify-content-center">
+                    <button data-toggle="collapse" data-target="#crear-grupo" class="btn btn-block collapsed newTopicBtn px-5"
+                        aria-expanded="false" aria-controls="new-topic-foro"><em class="fas fa-caret-down" aria-hidden="true"></em></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="groups-list">
+            <a href="{{ url_for('main.group_chat') }}">
+                <div class="group py-3">
+                    <div class="pl-1 pr-2">
+                        <img src="{{ url_for('static', filename = 'img/covid-19.jpg') }}" alt="grupo">
+                    </div>
+                    <div>
+                        <h5>Grupo 1</h5>
+                        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis placeat nesciunt unde modi, at vel atque assumenda tempora voluptatum rem!</p>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+    
+    <div class="col-12 col-sm-7 col-md-8 col-lg-9 chat-main-panel h-100 d-flex">
+        <div class="align-self-center justify-self-center">
+            Selecciona un grupo para empezar a chatear =).
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/foro.css')}}">
+{% endblock %}
+
+{% block title %}
+Foro
+{% endblock %}
+
+{% block page_content %}
+
+<div class="container container-aux">
+    <div class="row" style="display:flex; align-items: flex-start;">
+        <div class="col-12 col-sm-5 col-md-4 col-lg-3 sidebar-foro">
+            <h5 class="new-topic-head">Añadir nuevo tema</h5>
+            <div class="new-topic collapse" id="new-topic-foro">   
+    
+                <form class="form-new-topic" action="">
+                    <input type="text" class="form-control" name="in-new-topic" id="in-new-topic" placeholder="Nuevo tema...">
+                    <div class="form-group">
+                        <textarea name="topic-description" id="topic-description" cols="30" rows="6" class="form-control" placeholder="Descripción del tema"></textarea>
+                    </div>
+                    <div class="custom-file mb-3">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Añadir imagen</label>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-block">Añadir</button>
+                </form>   
+            </div>
+            <div title="Add topic" class="d-flex align-content-center justify-content-center">
+                <button id="newTopicBtn" data-toggle="collapse" data-target="#new-topic-foro" class="btn btn-outline-dark btn-block collapsed newTopicBtn px-5"
+                    aria-expanded="false" aria-controls="new-topic-foro">▼</button>
+            </div>
+    
+            <!-- POPULAR TOPICS -->
+            <div class="popular-topic">
+                <div class="popular-topic-head">
+                    Temas populares
+                </div>
+                <div class="popular-topic-content">
+                    <ul>
+                        <li>
+                            <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid"> 
+                            <div>
+                                <div>
+                                    Título 1
+                                </div>
+                                <div>
+                                    100 comentarios
+                                </div>
+                            </div> 
+                        </li>
+                        <li>
+                            <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid"> 
+                            <div>
+                                <div>
+                                    Título 1
+                                </div>
+                                <div>
+                                    100 comentarios
+                                </div>
+                            </div> 
+                        </li>
+                        <li>
+                            <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid"> 
+                            <div>
+                                <div>
+                                    Título 1
+                                </div>
+                                <div>
+                                    100 comentarios
+                                </div>
+                            </div> 
+                        </li>
+                        <li>
+                            <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid"> 
+                            <div>
+                                <div>
+                                    Título 1
+                                </div>
+                                <div>
+                                    100 comentarios
+                                </div>
+                            </div> 
+                        </li>
+                        <li>
+                            <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid"> 
+                            <div>
+                                <div>
+                                    Título 1
+                                </div>
+                                <div>
+                                    100 comentarios
+                                </div>
+                            </div> 
+                        </li>
+                        <li>
+                            <img src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid"> 
+                            <div>
+                                <div>
+                                    Título 1
+                                </div>
+                                <div>
+                                    100 comentarios
+                                </div>
+                            </div> 
+                        </li>
+                        <button class="btn btn-light">Ver más &rAarr;</button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-12 col-sm-7 col-md-8 col-lg-9 foro-topics">
+            <a href="{{ url_for('main.topic') }}">
+                <div class="topic-foro">
+                
+                    <small>Añadido hace 10 horas</small>
+                    <h4>Título del tema</h4>
+                    <div>
+                        <img class="img-topic" src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid-19">
+                    </div>
+                    <ul class="foot-topic">
+                        <li><i class="far fa-comment-alt"></i>10 Comentarios</li>
+                    </ul>
+                </div>
+            </a>
+    
+        
+            <a href="{{ url_for('main.topic') }}">
+                <div class="topic-foro">
+                
+                    <small>Añadido hace 10 horas</small>
+                    <h4>Título del tema</h4>
+                    <div>
+                        <img class="img-topic" src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid-19">
+                    </div>
+                    <ul class="foot-topic">
+                        <li><i class="far fa-comment-alt"></i>10 Comentarios</li>
+                    </ul>
+                </div>
+            </a>
+    
+            <a href="{{ url_for('main.topic') }}">
+                <div class="topic-foro">
+                
+                    <small>Añadido hace 10 horas</small>
+                    <h4>Título del tema</h4>
+                    <div>
+                        <img class="img-topic" src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid-19">
+                    </div>
+                    <ul class="foot-topic">
+                        <li><i class="far fa-comment-alt"></i>10 Comentarios</li>
+                    </ul>
+                </div>
+            </a>
+    
+            <a href="{{ url_for('main.topic') }}">
+                <div class="topic-foro">
+                
+                    <small>Añadido hace 10 horas</small>
+                    <h4>Título del tema</h4>
+                    <div>
+                        <img class="img-topic" src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid-19">
+                    </div>
+                    <ul class="foot-topic">
+                        <li><i class="far fa-comment-alt"></i>10 Comentarios</li>
+                    </ul>
+                </div>
+            </a>
+    
+            <a href="{{ url_for('main.topic') }}">
+                <div class="topic-foro">
+                
+                    <small>Añadido hace 10 horas</small>
+                    <h4>Título del tema</h4>
+                    <div>
+                        <img class="img-topic" src="{{url_for('static', filename = 'img/covid-19.jpg')}}" alt="Covid-19">
+                    </div>
+                    <ul class="foot-topic">
+                        <li><i class="far fa-comment-alt"></i>10 Comentarios</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    var btnNew = document.getElementById('newTopicBtn');
+    var clics = 0;
+    
+    btnNew.onclick = function(){
+        clics++;
+        if(clics % 2 === 0){
+            btnNew.innerHTML = `▼`;
+        }else{
+            btnNew.innerHTML = `▲`;
+        }
+    }
+</script>
+
+
+
+{%  endblock %}

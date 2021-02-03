@@ -1,0 +1,11 @@
+Estimado {{ user.alias }},
+
+Para confirmar su email haga click en el siguiente link:
+
+{{ url_for('auth.change_email', token=token, _external=True) }}
+
+Atentamente,
+
+el equipo de DC19
+
+Nota: Las respuestas a este correo no son monitorizadas.
