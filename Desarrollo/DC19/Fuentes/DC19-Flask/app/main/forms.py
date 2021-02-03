@@ -19,7 +19,8 @@ class PostForm(FlaskForm):
 
 class EditProfileForm(FlaskForm):
     # name = StringField('Real name', validators=[Length(0, 64)])
-    location = StringField('Ubicación', validators=[Length(0, 64)])
+    
+    location = StringField('Ubicación ', validators=[Length(0, 64)])
     about_me = TextAreaField('Sobre mi')
     submit = SubmitField('Guardar')
 
