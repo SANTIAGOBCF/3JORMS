@@ -94,7 +94,7 @@ def group_chat():
 def handleMessage(msg):
     print('Message: ' + msg)
     send(msg, broadcast = True)
-
+#CAMBIO: Agregar temas populares
 @main.route('/foro', methods=['GET', 'POST'])
 @login_required
 def foro():
